@@ -28,7 +28,7 @@ What `WORKFLOW.md` and the shared skills need to know about this repository.
 - **Dev stack:** None. The server runs against the IMAP account in the environment (Environment).
 - **Verify:** `npm run lint`, `npm run format:check`, `npm test` and `npm run build`.
 - **Ship:** When a tool is added or changed, update its entry under Available Tools in `README.md`.
-- **Release:** A merge to `main` runs semantic-release (`.github/workflows/release.yml`), which computes the version from the commit messages: `feat` releases a minor version, `fix` and `perf` a patch, a breaking change a major one, and `docs`, `test`, `chore`, `style`, `refactor` and `ci` nothing. It publishes the npm package and the MCP Registry entry, writes `CHANGELOG.md` and creates the GitHub release; nobody acts. A breaking change publishes a major version, so its PR's Deploy section lists `- [ ] before merge: the maintainer approves the major release`.
+- **Release:** A merge to `main` runs semantic-release (`.github/workflows/release.yml`), which computes the version from the commit messages: `feat` releases a minor version, `fix` and `perf` a patch, a breaking change a major one, and `docs`, `test`, `chore`, `style`, `refactor` and `ci` nothing. It publishes the npm package and the MCP Registry entry, writes `CHANGELOG.md` and creates the GitHub release. Nobody acts, except that a breaking change publishes a major version, so its PR's Deploy section lists `- [ ] before merge: the maintainer approves the major release`.
 
 ## Workflow
 
