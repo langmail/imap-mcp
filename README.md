@@ -78,7 +78,7 @@ Creates a draft email message and saves it to the IMAP server's drafts folder.
 }
 ```
 
-The tool will attempt to save the draft to either "INBOX.Drafts" or "Drafts" folder, depending on your email server's folder structure.
+The tool saves the draft to the folder your server marks as the drafts folder (the `\Drafts` special-use attribute, RFC 6154), such as `[Gmail]/Drafts` on Gmail. If the server marks no folder that way, it tries `INBOX.Drafts`, then `Drafts`.
 
 ## License
 
