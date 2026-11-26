@@ -1,0 +1,34 @@
+# Dependabot opens the npm minor and patch updates as one weekly group, and
+# the GitHub Actions updates. Majors, holds and the Node version CI runs are
+# the upgrade-dependency skill's (the Factory section's Dependencies in
+# AGENTS.md). An `ignore` entry that lists `update-types` applies to version
+# updates only, so security PRs still arrive.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "fix"
+      prefix-development: "chore"
+      include: "scope"
+    groups:
+      npm-minor-and-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
+    ignore:
+      # Majors: the upgrade-dependency skill.
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "ci"
+    ignore:
+      # The sync moves the factory pins.
+      - dependency-name: "langmail/factory*"
