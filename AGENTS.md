@@ -22,7 +22,7 @@ The server reads `IMAP_HOST`, `IMAP_PORT`, `IMAP_USERNAME`, `IMAP_PASSWORD` and 
 What `WORKFLOW.md` and the shared skills need to know about this repository.
 
 - **Issues:** GitHub issues in `langmail/imap-mcp`. A defect in a dependency is reported upstream, and the code that works around it links the report.
-- **Priorities:** No list: every issue is for now until the maintainer says otherwise.
+- **Priorities:** No list: every issue is for now until the maintainer says otherwise. Triage closes a `needs-info` issue as not planned once it has had no reply for 14 days since it started waiting (the latest of the comment that asked, the label, a reopening and the latest reply), unless it is `urgent` or assigned.
 - **Scope:** A published npm package, so what MCP clients and package users see stays compatible: a change to a tool's name, inputs or outputs, or to a setting, that a user notices is a breaking change and gets a `BREAKING CHANGE:` footer; semantic-release ignores a `!` after the type. Inside the code, break internal APIs freely and delete old code. Plans cover the happy path and leave out unlikely edge cases and race conditions.
 - **Plan:** Nothing beyond `WORKFLOW.md`.
 - **Dev stack:** None. The server runs against the IMAP account in the environment (Environment).
