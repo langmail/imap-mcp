@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/langmail/imap-mcp/compare/v0.1.1...v0.1.2) (2026-11-26)
+
+
+### Bug Fixes
+
+* **create-draft:** save to the folder the server marks as Drafts ([#14](https://github.com/langmail/imap-mcp/issues/14)) ([02e3030](https://github.com/langmail/imap-mcp/commit/02e30302e7d569792a64aa184f06346ec9813b27)), closes [#3](https://github.com/langmail/imap-mcp/issues/3)
+
 ## [0.1.1](https://github.com/langmail/imap-mcp/compare/v0.1.0...v0.1.1) (2026-11-19)
 
 
